@@ -1,0 +1,24 @@
+{
+    "extends": ["@rocketseat/eslint-config/next", "next/core-web-vitals"],
+    "rules": {
+        "import/order": [
+            0,
+            {
+                "newlines-between": "always",
+                "groups": [
+                    "internal",
+                    "external",
+                    "builtin",
+                    "unknown",
+                    ["parent", "sibling", "index"]
+                ],
+                "pathGroups": [
+                    {
+                        "pattern": "@/**",
+                        "group": "unknown"
+                    }
+                ]
+            }
+        ]
+    }
+}
